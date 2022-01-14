@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="libs/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="libs/jquery-3.6.0.min.js" defer></script>
+    <script src="libs/jquery.rateyo.min.js" defer></script>
+    <script src="js/index.js" type="module"></script>
+</head>
+<body>
+    <div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo__img" src="./images/LOGO.svg" alt="logo">
+                </a>
+                <nav class="menu">
+                    <button class="menu__close-btn">
+                        <img src="./images/icons/close-menu.svg" alt="">
+                    </button>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Постельное белье</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Одежда для дома</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Одежда для улицы</a>
+                        </li>
+                        <li class="menu__item menu__logout">
+                            <a class="menu__link" href="#">Выход</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a class="header__link" id="login" href="#">
+                        <img src="./images/icons/person.svg" alt="Авторизация">
+                    </a>
+                    <a class="header__link" id="favorite" href="#">
+                        <img src="./images/icons/favorite.svg" alt="Избранное">
+                    </a>
+                    <a class="header__link" id="cart" href="#">
+                        <img src="./images/icons/cart.svg" alt="Корзина">
+                    </a>
+                </div>
+                <button class="header__btn" id="menu">
+                    <img src="./images/icons/menu.svg" alt="Меню">
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+                <div class="product">
+                    <div class="product__images">
+                        <div class="product__mini-images">
+                            <img src="./images/product/product-1.jpg" alt="">
+                            <img src="./images/product/product-2.jpg" alt="">
+                            <img src="./images/product/product-3.jpg" alt="">
+                            <img src="./images/product/product-4.jpg" alt="">
+                            <img src="./images/product/product-5.jpg" alt="">
+                        </div>
+                        <img class="product__main-img" src="./images/product/product-1.jpg" alt="">
+                    </div>
+                    <div class="product__info">
+                        <h2 class="product__title">Пижама для девочек</h2>
+                        <p class="product__article">Арт. 02765/46</p>
+                        <div class="product__reviews">
+                            <span>Отзывы</span>
+                            <div class="product__rating">
+                                <div class="rate-Yo" data-rateyo-rating="4"></div>
+                            </div>
+                            <a class="product__reviews-link" href="#">14 отзывов
+                                <img src="./images/icons/arrow right swipe.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="product__price sale">
+                            <div class="product__price-box"><p>800 ₽</p><span>1 500 ₽</span>
+                                <a class="product__price-link" href="#">
+                                    <img src="./images/icons/arrow right swipe.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="product__sale">
+                                <div class="product__sale-item"><span>скидка -36%</span></div>
+                                <div class="product__sale-item"><span>акция -20%</span></div>
+                            </div>
+                        </div>
+                        <div class="product__size">
+                            <div class="size-select">
+                                <div class="size-select__inner">
+                                    <p class="size-select__title">Выбрать размер</p>
+                                    <button class="size-select__btn">
+                                        <img src="./images/icons/arrow right swipe.svg" alt="">
+                                    </button>                                
+                                </div>
+                                <ul class="size-select__list">
+                                    <li class="size-select__item">28</li>
+                                    <li class="size-select__item">30</li>
+                                    <li class="size-select__item">32</li>
+                                    <li class="size-select__item">34</li>
+                                </ul>
+                            </div>
+                            <a class="product__link" id="size-determine" href="#"><span>Определить размер</span></a>
+                        </div>
+                        <div class="product__count-box">
+                            <div class="product__counter">
+                                <button class="product__counter-btn product__counter-btn--plus">+</button>
+                                <span class="product__counter-text">1</span>
+                                <button class="product__counter-btn product__counter-btn--minus">-</button>
+                            </div>
+                            <div class="product__buttons-box">
+                                <button class="product__add-to-cart-btn product__btn" data-count="1">Добавить в корзину
+                                    <span class="message"></span>
+                                </button>
+                                <button class="product__add-to-favorite-btn product__btn">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.90002 3.0948C6.69981 -2.52108 -2.59119 1.90389 1.76037 7.60175C6.11193 13.2996 8.40002 15.4908 8.40002 15.4908" stroke="white"/>
+                                        <path d="M7.89415 3.0948C9.09435 -2.52108 18.7304 1.90389 14.3789 7.60175C10.0273 13.2996 7.70001 15.5 7.70001 15.5" stroke="white"/>
+                                        <path d="M7.39099 2.70752L8.4043 2.70757L8.38337 3.24079H7.39099V2.70752Z" fill="white"/>
+                                    </svg>
+                                    <span class="message"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <a class="product__link" id="buy-one-click" href="#"><span>Купить в 1 клик</span></a>                        <div class="product__extra-info">
+                            <a class="product__link" href="#">
+                                <img src="./images/icons/Closes.svg" alt="Описание товара">
+                                <span>Описание товара</span>
+                            </a>
+                            <a class="product__link" href="#">
+                                <img src="./images/icons/clock.svg" alt="Доставка и возврат">
+                                <span>Доставка и возврат</span>
+                            </a>
+                            <a class="product__link" href="#">
+                                <img src="./images/icons/pay.svg" alt="Способы оплаты">
+                                <span>Способы оплаты</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a class="gallery__link product__link" href="#"><span>Посмотреть все стили</span></a>
+                    <div class="gallery__inner">
+                        <a class="gallery-item" href="#">
+                            <img class="gallery-item__img" src="./images/gallery/gallery-1.jpg" alt="">
+                            <div class="gallery-item__info">
+                                <button class="gallery-item__btn">
+                                    <img src="./images/icons/full screen.svg" alt="">
+                                </button>
+                                <img src="./images/icons/bag.svg" alt="">
+                                <p>Узнай, что на мне</p>
+                                <div class="gallery-item__likes">
+                                    <img src="./images/icons/favorite full.svg" alt="">
+                                    <span>200</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="gallery-item" href="#">
+                            <img class="gallery-item__img" src="./images/gallery/gallery-2.jpg" alt="">
+                            <div class="gallery-item__info">
+                                <button class="gallery-item__btn">
+                                    <img src="./images/icons/full screen.svg" alt="">
+                                </button>
+                                <img src="./images/icons/bag.svg" alt="">
+                                <p>Узнай, что на мне</p>
+                                <button class="gallery-item__likes">
+                                    <img src="./images/icons/favorite full.svg" alt="">
+                                    <span>200</span>
+                                </button>
+                            </div>
+                        </a>
+                        <a class="gallery-item" href="#">
+                            <img class="gallery-item__img" src="./images/gallery/gallery-3.jpg" alt="">
+                            <div class="gallery-item__info">
+                                <button class="gallery-item__btn">
+                                    <img src="./images/icons/full screen.svg" alt="">
+                                </button>
+                                <img src="./images/icons/bag.svg" alt="">
+                                <p>Узнай, что на мне</p>
+                                <div class="gallery-item__likes">
+                                    <img src="./images/icons/favorite full.svg" alt="">
+                                    <span>200</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="gallery-item" href="#">
+                            <img class="gallery-item__img" src="./images/gallery/gallery-4.jpg" alt="">
+                            <div class="gallery-item__info">
+                                <button class="gallery-item__btn">
+                                    <img src="./images/icons/full screen.svg" alt="">
+                                </button>
+                                <img src="./images/icons/bag.svg" alt="">
+                                <p>Узнай, что на мне</p>
+                                <div class="gallery-item__likes">
+                                    <img src="./images/icons/favorite full.svg" alt="">
+                                    <span>200</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="gallery-item" href="#">
+                            <img class="gallery-item__img" src="./images/gallery/gallery-5.jpg" alt="">
+                            <div class="gallery-item__info">
+                                <button class="gallery-item__btn">
+                                    <img src="./images/icons/full screen.svg" alt="">
+                                </button>
+                                <img src="./images/icons/bag.svg" alt="">
+                                <p>Узнай, что на мне</p>
+                                <div class="gallery-item__likes">
+                                    <img src="./images/icons/favorite full.svg" alt="">
+                                    <span>200</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__item">
+                    <h6 class="footer__item-title">Покупателям</h6>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">Каталог</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">Акции</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">Бренды</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h6 class="footer__item-title">О нас</h6>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">О компании</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">Новости</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">Команда</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__subscribe">
+                    <h6 class="footer__item-title">Узнайте первыми о новинках и акциях</h6>
+                    <form class="footer-form" action="#">
+                        <div class="footer-form__input-group">
+                            <input class="footer-form__input" type="email" placeholder="Адрес электронной почты">
+                            <button class="footer-form__delete-btn">
+                                <img src="./images/icons/close.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="footer-form__btn" type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

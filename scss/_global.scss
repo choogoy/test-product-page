@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}
+
+html, body {
+	height: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+input {
+    padding: 0;
+    border: none;
+    outline: transparent;
+}
+
+.container {
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+    margin-top: auto;
+	flex: 0 0 auto;
+}
+
+.message {
+    position: absolute;
+    transition: all 0.5s;
+    transform: translateY(0);
+    top: 0;
+}
+
+.show {
+    transition: all 0.5s;
+    transform: translateY(calc(-100% - 10px));
+    z-index: -1;
+}
+
+.fade {
+    opacity: 0;
+}
